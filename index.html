@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="text-center my-4">
+            <h1 class="mb-4">Todo List</h1>
+            <form class="search text-light">
+                <input class="form-control m-auto" type="text" name="search" placeholder="search todos..." >
+            </form>
+        </header>
+
+        <ul class="list-group todos mx-auto text-light">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Watch HTML/CSS video</span>
+              <i class="far fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Book room</span>
+              <i class="far fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Edit photos in lightroom</span>
+              <i class="far fa-trash-alt delete"></i>
+            </li>
+         </ul>
+      
+          <form class="add text-center my-4">
+            <label class="text-dark">Add a new todo...</label>
+            <input class="form-control m-auto" type="text" name="add" />
+          </form>
+    
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
