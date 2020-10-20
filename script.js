@@ -11,7 +11,7 @@ const generateTemplate = (todo) => {
   list.innerHTML += html;
 };
 
-addForm.addEventListener("submit", (e) => {
+addForm.addEventListener("submit", e => {
   e.preventDefault();
   // get the input from the user
   const todo = addForm.add.value.trim();
@@ -24,23 +24,23 @@ addForm.addEventListener("submit", (e) => {
 });
 
 // delete todos
-list.addEventListener("click", (e) => {
+list.addEventListener("click", e => {
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
   }
 });
 
 // filtering todos
-const filterTodos = (term) => {
+const filterTodos = term => {
   // get the all term that doesn't match & hide them using filtered class
   Array.from(list.children)
-    .filter((todo) => !todo.textContent.toLowerCase().includes(term))
-    .forEach((todo) => todo.classList.add("filtered"));
+    .filter(todo => !todo.textContent.toLowerCase().includes(term))
+    .forEach(todo => todo.classList.add("filtered"));
 
   // get the all term that do match & remove filtered class
   Array.from(list.children)
-    .filter((todo) => todo.textContent.toLowerCase().includes(term))
-    .forEach((todo) => todo.classList.remove("filtered"));
+    .filter(todo => todo.textContent.toLowerCase().includes(term))
+    .forEach(todo => todo.classList.remove("filtered"));
 };
 
 // keyup event
